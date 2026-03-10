@@ -1,0 +1,15 @@
+[file,path] = uigetfile({'*.csv;*.xlsx'});
+
+            if isequal(file,0)
+                return
+            end
+
+            filename = fullfile(path,file);
+            data = readtable(filename);
+
+            app.UITable.Data = data;
+            app.UITable.ColumnName = data.Properties.VariableNames;
+
+            app.DataTable = data;
+            app.EditField.Value = file;
+            updateScatterPlot(app)

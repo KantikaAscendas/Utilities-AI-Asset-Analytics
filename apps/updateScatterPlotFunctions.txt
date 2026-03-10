@@ -1,0 +1,47 @@
+function updateScatterPlot(app)
+            data = app.DataTable;
+
+            if isempty(data)
+                return
+            end
+
+            cla(app.UIAxes)
+            hold(app.UIAxes,'on')
+
+            x = 1:height(data);
+
+            if app.OilTemp_CCheckBox.Value
+                scatter(app.UIAxes,x,data.OilTemp_C,'filled')
+            end
+
+            if app.AmbientTemp_CCheckBox.Value
+                scatter(app.UIAxes,x,data.AmbientTemp_C,'filled')
+            end
+
+            if app.Moisture_ppmCheckBox.Value
+                scatter(app.UIAxes,x,data.Moisture_ppm,'filled')
+            end
+
+            if app.H2_ppmCheckBox.Value
+                scatter(app.UIAxes,x,data.H2_ppm,'filled')
+            end
+
+            if app.CO_ppmCheckBox.Value
+                scatter(app.UIAxes,x,data.CO_ppm,'filled')
+            end
+
+            if app.PartialDischarge_pCCheckBox.Value
+                scatter(app.UIAxes,x,data.PartialDischarge_pC,'filled')
+            end
+
+            if app.Vibration_mm_sCheckBox.Value
+                scatter(app.UIAxes,x,data.Vibration_mm_s,'filled')
+            end
+
+            hold(app.UIAxes,'off')
+
+            xlabel(app.UIAxes,"Sample Index")
+            ylabel(app.UIAxes,"Value")
+            title(app.UIAxes,"Transformer Condition Data")
+            legend(app.UIAxes,{'OilTemp','AmbientTemp','Moisture','H2','CO','PD','Vibration'})
+        end
