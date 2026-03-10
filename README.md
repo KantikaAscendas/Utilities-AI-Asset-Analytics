@@ -46,6 +46,9 @@ Health categories:
 
 MATLAB Tool Used: Classification Learner App
 
+
+![image_0.png](README_media/image_0.png)
+
 ```matlab
 %open livescript 1 Predict Transformer Health
 edit livescripts\PredictTransformerHealth.mlx
@@ -74,6 +77,9 @@ Health Score Interpretation:
 
 MATLAB Tool Used: Regression Learner App
 
+
+![image_1.png](README_media/image_1.png)
+
 ```matlab
 %open livescript 2 Detect Abnormal Transformer
 %launch the regression learner app
@@ -94,6 +100,9 @@ This demo uses **MATLAB App Designer** to create a simple interface where users 
 3. View transformer health results
 
 This allows engineers to use AI models without writing code.
+
+
+![image_2.png](README_media/image_2.png)
 
 ```matlab
 edit apps\PredictTransformerHealthTemplate.mlapp
